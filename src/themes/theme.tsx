@@ -1,35 +1,46 @@
-import { createTheme } from '@material-ui/core'
+import { createTheme } from "@material-ui/core";
 
 export const theme = createTheme({
   typography: {
-    fontFamily: 'Open Sans, sans-serif',
+    fontFamily: "Open Sans, sans-serif",
     fontSize: 14,
     button: {
-      textTransform: 'none',
+      textTransform: "none",
       letterSpacing: 0,
-      fontWeight: 'bold'
-    }
+      fontWeight: "bold",
+    },
   },
   overrides: {
     MuiInput: {
       input: {
-        fontWeight: 'bold'
-      }
-    }
+        fontWeight: "bold",
+      },
+    },
   },
   palette: {
-    misc: {
-      coffee: '#c0ffee',
-      hawks: '#69be28',
-      tardis: '#003b6f',
-    },
-    primary: { 
-      main: '#5bbcff',
-      background: '#555',
-      text: '#f0f0f0'
+    primary: {
+      main: "#127893",
     },
     secondary: {
-      main: '#642900'
+      main: "#642900",
+    },
+    success: {
+      main: '#92c0a3',
+    },
+    warning: {
+      main: '#e8d162'
+    },
+    error: {
+      main: '#e8695d'
+    },
+    info: {
+      main: '#555'
     }
-  }
-})
+  },
+});
+
+export const miscColors = {
+  coffee: "#c0ffee",
+  hawks: "#69be28",
+  tardis: "#003b6f",
+};
