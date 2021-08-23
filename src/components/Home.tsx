@@ -4,13 +4,14 @@ import {
   CardActions,
   CardContent,
   Grid,
-  Typography
+  Theme,
+  Typography,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { miscColors } from '../themes/theme'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: miscColors.tardis,
     height: '100vh',
@@ -46,7 +47,7 @@ const Home = () => {
         </CardContent>
         <CardActions>
           <Grid container
-            justify='space-evenly'>
+            justifyContent='space-evenly'>
             <Button variant='contained' color='primary'>
               About Me
             </Button>
