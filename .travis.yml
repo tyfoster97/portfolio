@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - node
+
+jobs:
+  fast_finish: true
+
+before_install:
+  - npm i -g npm
