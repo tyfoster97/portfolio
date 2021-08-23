@@ -48,7 +48,10 @@ const Home = () => {
         <CardActions>
           <Grid container
             justifyContent='space-evenly'>
-            <Button variant='contained' color='primary'>
+            <Button 
+              variant='contained' 
+              color='primary'
+              href='about'>
               About Me
             </Button>
             <Button 
@@ -67,7 +70,10 @@ const Home = () => {
               rel='noopener noreferrer'>
               GitHub
             </Button>
-            <Button variant='contained' color='primary'>
+            <Button 
+              variant='contained' 
+              color='primary'
+              href='projects'>
               Projects
             </Button>
           </Grid>
