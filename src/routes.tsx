@@ -1,5 +1,5 @@
 import React/*, { useState }*/ from 'react'
-import { Route, Switch, withRouter } from 'react-router-dom'
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom'
 import { Home } from './components'
 
 const Routes = () => {
@@ -14,6 +14,8 @@ const Routes = () => {
                     path='/'
                     component={Home}
                 />
+
+                <Redirect to='/'/>
             </Switch>
         </>
     )
