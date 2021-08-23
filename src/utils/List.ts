@@ -1,4 +1,4 @@
 export default interface List<T> {
-    name: string;
+    name: string
     items: T[]
 }
