@@ -30,7 +30,7 @@ const SiteAccordion = ({summary, details}: Props) => {
             <AccordionSummary expandIcon={<ExpandMoreIcon className={classes.icon} />}>
                 {summary}
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails className={classes.details}>
                 {details}
             </AccordionDetails>
         </Accordion>
