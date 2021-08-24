@@ -1,7 +1,7 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import { useCallback } from "react";
-import { Route, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { miscColors } from "../../../themes/theme";
 import NavButtons from "../NavButtons/NavButtons";
 
