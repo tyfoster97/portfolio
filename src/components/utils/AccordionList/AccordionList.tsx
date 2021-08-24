@@ -20,30 +20,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.getContrastText(miscColors.tardis),
     margin: theme.spacing(2),
   },
-  accordion: {
-    backgroundColor: theme.palette.info.light,
-    color: theme.palette.getContrastText(theme.palette.info.light),
-    marginBottom: theme.spacing(1.5),
-    width: "100%",
-  },
   heading: {
     fontWeight: "bold",
-  },
-  details: {
-    backgroundColor: theme.palette.info.dark,
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
   },
   chip: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.getContrastText(theme.palette.primary.main),
     fontSize: 16,
     margin: theme.spacing(1),
-  },
-  icon: {
-    color: theme.palette.getContrastText(theme.palette.info.light),
   },
 }));
 
