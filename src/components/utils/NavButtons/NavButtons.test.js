@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect'
 import NavButtons from "./NavButtons"
 
 const buttons = [
-  'About Me',
+  'About',
   'LinkedIn',
   'GitHub',
   'Projects'
