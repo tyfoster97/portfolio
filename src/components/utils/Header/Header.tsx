@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.getContrastText(miscColors.tardis),
     fontSize: 32,
     fontWeight: "bold",
+    margin: theme.spacing(2),
     textAlign: "center",
   },
 }));
