@@ -1,4 +1,4 @@
-import { Box, Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import { miscColors } from "../../themes/theme";
 import { AccordionList, SiteHeader } from "../utils";
