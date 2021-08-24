@@ -20,8 +20,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: "center",
   },
   title: {
-    fontSize: 24,
-    fontWeight: "bold",
     color: theme.palette.getContrastText(miscColors.tardis),
     margin: theme.spacing(2),
   },
@@ -29,9 +27,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: theme.palette.info.light,
     color: theme.palette.getContrastText(theme.palette.info.light),
     marginBottom: theme.spacing(1.5),
+    width: '100%',
   },
   heading: {
-    fontSize: 18,
     fontWeight: "bold",
   },
   details: {
@@ -39,12 +37,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-between',
   },
   chip: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.getContrastText(theme.palette.primary.main),
-    fontSize: 14,
+    fontSize: 16,
     margin: theme.spacing(1),
   },
   icon: {
@@ -61,13 +59,13 @@ const AccordionList = ({ items }: Props) => {
 
   return (
     <Grid className={classes.root} container direction="column">
-      <Typography className={classes.title}>{items.name}</Typography>
+      <Typography variant='h4' className={classes.title}>{items.name}</Typography>
       {items.items &&
         items.items.map((listItems) => {
           return (
             <Accordion className={classes.accordion} key={`${items.name}-${listItems.name}`}>
               <AccordionSummary expandIcon={<ExpandMoreIcon className={classes.icon}/>}>
-                <Typography className={classes.heading}>{listItems.name}</Typography>
+                <Typography variant='h6' className={classes.heading}>{listItems.name}</Typography>
               </AccordionSummary>
               <AccordionDetails className={classes.details}>
                 {listItems.items &&

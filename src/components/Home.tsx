@@ -21,11 +21,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: theme.palette.primary.contrastText,
     padding: theme.spacing(3),
     maxWidth: '600px',
-    width: '95%',
+    width: '80%',
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
     textAlign: 'center',
   }
 }))
@@ -41,7 +39,7 @@ const Home = () => {
       alignItems='center'>
       <Card className={classes.card} color='info'>
         <CardContent>
-          <Typography className={classes.title}>
+          <Typography variant='h2' className={classes.title}>
             Ty Foster
           </Typography>
         </CardContent>

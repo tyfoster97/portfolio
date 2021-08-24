@@ -1,24 +1,30 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import { useCallback } from "react";
+import { Route, useHistory } from "react-router-dom";
 import { miscColors } from "../../../themes/theme";
 import NavButtons from "../NavButtons/NavButtons";
 
 const useStyles = makeStyles((theme) => ({
   title: {
     color: theme.palette.getContrastText(miscColors.tardis),
-    fontSize: 32,
-    fontWeight: "bold",
+    cursor: 'pointer',
     margin: theme.spacing(2),
     textAlign: "center",
+    textDecoration: 'none',
   },
 }));
 
 const SiteHeader = () => {
   const classes = useStyles();
+  const history = useHistory()
+  const handleClick= useCallback(() => history.push('/'), [history])
 
   return (
     <Grid container direction="column">
-      <Typography className={classes.title}>Ty Foster</Typography>
+      <Typography variant='h2'
+        className={classes.title}
+        onClick={handleClick}>Ty Foster</Typography>
       <NavButtons />
     </Grid>
   );
