@@ -1,12 +1,13 @@
-import React from 'react'
-import ProjectCard from './Project'
+import React from "react";
+import { PageWrapper } from "../utils";
+import ProjectCard from "./Project";
 
 const Projects = () => {
-    return (
-        <>
-        <ProjectCard />
-        </>
-    )
-}
+  return (
+    <PageWrapper>
+      <ProjectCard />
+    </PageWrapper>
+  );
+};
 
-export default Projects
+export default Projects;
