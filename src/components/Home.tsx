@@ -1,5 +1,4 @@
 import {
-  Button,
   Card,
   CardActions,
   CardContent,
@@ -10,6 +9,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { miscColors } from '../themes/theme'
+import { NavButtons } from './utils'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -46,37 +46,7 @@ const Home = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Grid container
-            justifyContent='space-evenly'>
-            <Button 
-              variant='contained' 
-              color='primary'
-              href='about'>
-              About Me
-            </Button>
-            <Button 
-              variant='contained' 
-              color='primary'
-              href='https://linkedin.com/in/ty-foster'
-              target='_blank'
-              rel='noopener noreferrer'>
-              LinkedIn
-            </Button>
-            <Button 
-              variant='contained' 
-              color='primary'
-              href='https://github.com/tyfoster97'
-              target='_blank'
-              rel='noopener noreferrer'>
-              GitHub
-            </Button>
-            <Button 
-              variant='contained' 
-              color='primary'
-              href='projects'>
-              Projects
-            </Button>
-          </Grid>
+          <NavButtons />
         </CardActions>
       </Card>
     </Grid>
