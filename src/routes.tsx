@@ -1,7 +1,6 @@
 import React/*, { useState }*/ from 'react'
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom'
-import { Home } from './components'
-import About from './components/About/About'
+import { About, Home } from './components'
 
 const Routes = () => {
     //const [errorMessage, setErrorMessage] = useState('')
