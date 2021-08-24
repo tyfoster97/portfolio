@@ -150,8 +150,6 @@ const ProjectDetails = (props: DetailsProps) => {
 };
 
 const ProjectCard = ({ project }: Props) => {
-  const classes = useStyles();
-  
   return (
     <SiteAccordion
       summary={
