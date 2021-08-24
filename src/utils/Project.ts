@@ -2,9 +2,9 @@ export default interface Project {
     name: string
     start: Date
     end?: Date
-    //imgUrl?: string
-    description: string
-    sourceUrl: string
+    imgUrl?: string
+    description: string[]
+    sourceUrl?: string
     demoUrl?: string
     skills: string[]
 }

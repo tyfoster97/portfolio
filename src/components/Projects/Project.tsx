@@ -4,6 +4,9 @@ import Project, { getDuration } from "../../utils/Project";
 import SiteAccordion from "../utils/Accordion/Accordion";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    textAlign: "left",
+  },
   button: {
     color: theme.palette.getContrastText(theme.palette.info.dark),
   },
@@ -21,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 const defaultProject: Project = {
   name: "Project",
   start: new Date(),
-  description: "the default project",
+  description: ["the default project"],
   sourceUrl: "https://github.com/tyfoster97",
   skills: ["typing", "Git"],
 };
@@ -29,7 +32,7 @@ const defaultProject: Project = {
 type DetailsProps = {
   name: string;
   demoUrl?: string;
-  description: string;
+  description: string[];
   imageUrl?: string;
   skills: string[];
   sourceUrl?: string;
@@ -70,7 +73,7 @@ const ProjectDetails = (props: DetailsProps) => {
   const { name, demoUrl, description, imageUrl, skills, sourceUrl } = props;
 
   return (
-    <Grid container direction="column">
+    <Grid className={classes.root} container direction="column">
       {imageUrl && (
         <Grid className={classes.section} item>
           <img src={imageUrl} alt="software demo screenshot" />
@@ -82,9 +85,13 @@ const ProjectDetails = (props: DetailsProps) => {
             <Typography variant="body1" className={classes.sectionHeading}>
               Description
             </Typography>
-            <Typography variant="body2" className={classes.content}>
-              {description}
-            </Typography>
+            {description.map((line, i) => {
+              return (
+                <Typography key={`${name}-desc-${i}`} variant="body2" className={classes.content}>
+                  {`- ${line}`}
+                </Typography>
+              );
+            })}
           </Grid>
         </Grid>
       )}
@@ -144,7 +151,7 @@ const ProjectDetails = (props: DetailsProps) => {
 
 const ProjectCard = ({ project }: Props) => {
   const classes = useStyles();
-  console.log(classes);
+  
   return (
     <SiteAccordion
       summary={
