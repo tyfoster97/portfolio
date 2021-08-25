@@ -1,6 +1,5 @@
 import { Button, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
-import { useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -12,8 +11,6 @@ const useStyles = makeStyles((theme) => ({
 const NavButtons = () => {
   const classes = useStyles();
   const history = useHistory()
-  const goToAbout = useCallback(() => history.push('/about'), [history])
-  const goToProjects = useCallback(() => history.push('/projects'), [history])
 
   return (
     <Grid container justifyContent="space-evenly">
@@ -21,7 +18,7 @@ const NavButtons = () => {
         className={classes.button}
         variant="contained"
         color="primary"
-        onClick={goToAbout}
+        onClick={() => history.push('/about')}
       >
         About
       </Button>
@@ -49,7 +46,7 @@ const NavButtons = () => {
         className={classes.button}
         variant="contained"
         color="primary"
-        onClick={goToProjects}
+        onClick={() => history.push('/projects')}
       >
         Projects
       </Button>
