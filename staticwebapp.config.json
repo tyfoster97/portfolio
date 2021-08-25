@@ -5,7 +5,7 @@
     "routes": [
         {
             "route": "/admin/*",
-            "allowedRoles": ["authenticated"]
+            "allowedRoles": ["administrator"]
         },
         {
             "route": "/api/*",
@@ -13,11 +13,11 @@
         },
         {
             "route": "/api/admin/*",
-            "allowedRoles": ["authenticated"]
+            "allowedRoles": ["adminstrator"]
         },
         {
             "route": "/api/admin/*",
-            "redirect": "/.auth/login/aad",
+            "redirect": "/login",
             "allowedRoles": ["anonymous"]
         },
         {
