@@ -1,5 +1,40 @@
 {
-    "navigationFallback": {
-        "rewrite": "/index.html"
+  "routes": [
+    {
+      "route": "/admin/*",
+      "allowedRoles": ["administrator"]
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/api/admin/*",
+      "allowedRoles": ["adminstrator"]
+    },
+    {
+      "route": "/api/admin/*",
+      "redirect": "/login",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/login",
+      "redirect": "/.auth/login/aad"
+    },
+    {
+      "route": "/logout",
+      "redirect": "/.auth/logout"
+    },
+    {
+      "route": "/.auth/login/twitter",
+      "statusCode": 404
+    },
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404
     }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  }
 }

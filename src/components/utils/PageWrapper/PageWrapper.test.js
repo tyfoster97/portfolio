@@ -1,6 +1,6 @@
-import { render } from "@testing-library/react"
+import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import PageWrapper from "./PageWrapper"
+import PageWrapper from './PageWrapper'
 
 describe('<PageWrapper />', () => {
   it('should render', () => {
