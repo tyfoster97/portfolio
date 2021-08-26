@@ -25,18 +25,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     textAlign: 'center',
-  }
+  },
 }))
 
 const Home = () => {
   const classes = useStyles()
 
   return (
-    <Grid container
+    <Grid
+      container
       className={classes.root}
       component='main'
       justifyContent='center'
-      alignItems='center'>
+      alignItems='center'
+    >
       <Card className={classes.card} color='info'>
         <CardContent>
           <Typography variant='h2' className={classes.title}>
@@ -51,4 +53,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Home

@@ -5,6 +5,6 @@ import Dashboard from '../Dashboard'
 describe('<AdminDashboard />', () => {
   it('should render', () => {
     const { getByText } = render(<Dashboard />)
-  expect(getByText('Admin Dashboard')).toBeInTheDocument()
+    expect(getByText('Admin Dashboard')).toBeInTheDocument()
   })
 })
