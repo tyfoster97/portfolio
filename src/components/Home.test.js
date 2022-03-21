@@ -1,6 +1,6 @@
-import { render } from "@testing-library/react"
+import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import Home from "./Home"
+import Home from './Home'
 
 const title = 'Ty Foster'
 

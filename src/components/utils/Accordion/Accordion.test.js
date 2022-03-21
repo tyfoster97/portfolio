@@ -4,7 +4,7 @@ import SiteAccordion from "./Accordion"
 
 describe('<SiteAccordion />', () => {
   it('should render', () => {
-    const { getByText } = render(<SiteAccordion summary='summary' details='details'/>)
+    const { getByText } = render(<SiteAccordion summary='summary' details='details' />)
     expect(getByText('summary')).toBeInTheDocument()
     expect(getByText('details')).toBeInTheDocument()
   })
