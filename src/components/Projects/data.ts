@@ -4,6 +4,7 @@ import Project from '../../utils/Project'
 const MESSENGER: Project = {
   name: 'Messenger clone',
   start: new Date(2021, 7), // aug 2021
+  end: new Date(2021, 10), // nov 2021
   description: [
     'Fixed bug where messages did not properly send',
     'Implemented read receipts',

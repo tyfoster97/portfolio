@@ -3,13 +3,15 @@ import List from '../../utils/List'
 const LANGUAGES: List<string> = {
   name: 'Programming Languages',
   items: [
+    'Bash',
     'C/C++',
     'CSS/SCSS',
     'HTML',
-    'Java',
+    'Java/Groovy',
     'JavaScript/TypeScript',
     'LaTeX',
     'MongoDB',
+    'Powershell',
     'Python',
     'SQL/MySQL/PostgreSQL',
   ],
@@ -35,8 +37,14 @@ const FRAMEWORKS: List<string> = {
 const SOFTWARE: List<string> = {
   name: 'Software',
   items: [
+    'Ansible',
     'Astah UML',
+    'Chef',
     'Circle CI',
+    'Docker',
+    'Helm',
+    'Jenkins',
+    'Kubernetes',
     'Microsoft Azure',
     'Microsoft Office',
     'SolidWorks',
